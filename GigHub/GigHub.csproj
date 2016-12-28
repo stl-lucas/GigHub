@@ -210,10 +210,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
+    <Compile Include="Dtos\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,8 +243,17 @@
     <Compile Include="Migrations\201612241652596_AddAttendance.Designer.cs">
       <DependentUpon>201612241652596_AddAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612271652578_AddFollowings.cs" />
+    <Compile Include="Migrations\201612271652578_AddFollowings.Designer.cs">
+      <DependentUpon>201612271652578_AddFollowings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612281714279_AddFollowingsCorrection.cs" />
+    <Compile Include="Migrations\201612281714279_AddFollowingsCorrection.Designer.cs">
+      <DependentUpon>201612281714279_AddFollowingsCorrection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -327,6 +338,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Followings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -354,6 +366,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612241652596_AddAttendance.resx">
       <DependentUpon>201612241652596_AddAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612271652578_AddFollowings.resx">
+      <DependentUpon>201612271652578_AddFollowings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612281714279_AddFollowingsCorrection.resx">
+      <DependentUpon>201612281714279_AddFollowingsCorrection.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
